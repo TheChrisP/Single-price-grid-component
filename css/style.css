@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* - Font sizes (px) 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Karla', sans-serif;
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-off-cyan: hsla(179, 62%, 43%, 0.7);
+  --clr-light-cyan: hsl(179, 43%, 75%);
+  --clr-bright-yellow: hsl(71, 73%, 54%);
+  --clr-light-grey: hsl(204, 43%, 93%);
+  --clr-grayish-blue: hsl(218, 22%, 67%);
+  --clr-white: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-light-grey);
+  color: var(--clr-light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading-primary {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-cyan);
+}
+
+.heading-secondary {
+  font-size: 1.8rem;
+}
+
+.price-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  max-width: 63rem;
+}
+
+.container {
+  padding: 3.2rem 2.4rem;
+}
+
+.container:nth-child(1) {
+  background-color: var(--clr-white);
+}
+
+.description {
+  color: var(--clr-bright-yellow);
+  font-weight: 700;
+  padding-top: 2.4rem;
+}
+
+.about-text {
+  font-size: 1.4rem;
+  color: var(--clr-grayish-blue);
+  line-height: 1.8;
+  padding-top: 2.4rem;
+}
+
+.container:nth-child(2) {
+  background-color: var(--clr-cyan);
+}
+
+.price-plan {
+  display: flex;
+  align-items: center;
+  margin-top: 1.8rem;
+  color: var(--clr-light-cyan);
+}
+
+.price-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--clr-light-grey);
+  margin-right: 0.8rem;
+}
+
+.price-text {
+  margin-top: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.btn--primary {
+  display: block;
+  padding: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--clr-white);
+  background-color: var(--clr-bright-yellow);
+  border-radius: 6px;
+  box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.container:nth-child(3) {
+  background-color: var(--clr-off-cyan);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 2.4rem;
+}
+
+.list-items {
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+
+@media (min-width: 40em) {
+  .price-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+
+  .container {
+    padding: 3.8rem;
+  }
+
+  .about-text {
+    padding-top: 1rem;
+  }
+}
