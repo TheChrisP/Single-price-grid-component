@@ -17,6 +17,7 @@
   --clr-off-cyan: hsla(179, 62%, 43%, 0.7);
   --clr-light-cyan: hsl(179, 43%, 75%);
   --clr-bright-yellow: hsl(71, 73%, 54%);
+  --clr-dark-yellow: hsl(71, 62%, 49%);
   --clr-light-grey: hsl(204, 43%, 93%);
   --clr-grayish-blue: hsl(218, 22%, 67%);
   --clr-white: #fff;
@@ -99,7 +100,8 @@ body {
   margin-bottom: 3.2rem;
 }
 
-.btn--primary {
+.btn--primary:link,
+.btn--primary:visited {
   display: block;
   padding: 1.6rem;
   text-align: center;
@@ -108,6 +110,13 @@ body {
   background-color: var(--clr-bright-yellow);
   border-radius: 6px;
   box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: var(--clr-dark-yellow);
 }
 
 .container:nth-child(3) {
